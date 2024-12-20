@@ -1,6 +1,9 @@
 # WebDevSolution
 
-Este é um projeto de exemplo chamado WebDevSolution. Siga as instruções abaixo para executar o projeto localmente.
+## Live Demo
+
+Você pode ver uma demonstração do projeto [aqui](https://webdevsolution.costa0910.dev/).
+
 
 ## Pré-requisitos
 
@@ -11,7 +14,7 @@ Antes de começar, você precisa ter o Node.js e o npm (ou yarn) instalados em s
 1. **Clone o repositório ou usa o codigo no zip e ignora esta etapa:**
 
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/Costa0910/webdevsolution.git
    cd webdevsolution
    ```
 
@@ -41,7 +44,7 @@ ou, se você estiver usando o yarn:
 yarn dev
    ```
 
-Depois de iniciar o servidor, você pode acessar o projeto no seu navegador em `http://localhost:3000`.
+Depois de iniciar o servidor, você pode acessar o projeto no seu navegador em `http://localhost:5173/`.
 
 ## Scripts Disponíveis
 
