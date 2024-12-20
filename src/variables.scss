@@ -1,0 +1,57 @@
+// // Brand Colors
+// $color-primary: #00A7E1;     // Bright blue from the "GUARDAR" button
+// $color-secondary: #2C3E50;   // Dark blue-gray from the sidebar
+
+// // Background Colors
+// $bg-color-light: #F5F5F5;    // White main content background
+// $bg-color-dark: #1e2e3d;     // Same as secondary for dark mode
+// $bg-color-section: #FFFFFF;  // Light gray for section backgrounds (tipo de utilizador)
+
+// // Text Colors
+// $text-color-light: #2C3E50;  // Dark text for light mode
+// $text-color-dark: #FFFFFF;   // White text for dark mode
+// $text-color-muted: #6C7A89;  // Muted text for labels (Email, Telefone)
+
+// // UI Elements
+// $button-primary: #00A7E1;    // "GUARDAR" button
+// $button-secondary: #FFFFFF;   // "Cancelar" button
+// $checkbox-active: #00A7E1;    // Selected checkbox color
+// $border-color: #E0E0E0;      // Input borders
+// Brand Colors
+$color-primary: #02ade6;     // Updated bright blue for primary actions
+$color-secondary: #323f51;   // Updated sidebar background
+
+// Background Colors
+$bg-color-light: #f5f5f5;    // Main content background
+$bg-color-dark: #263242;     // Sidebar footer background
+$bg-color-section: #ffffff;   // White for collapsible content
+$bg-header: #ffffff;         // White header background
+$bg-collapse-header: #ebebeb; // Collapsible header background
+
+// Text Colors
+$text-color-light: #354151;   // Main content text
+$text-color-dark: #ffffff;    // White text (for sidebar)
+$text-color-muted: #7f90a4;   // Contact form labels
+
+// UI Elements
+$button-primary: #02ade6;     // Primary button background
+$button-secondary: #ffffff;    // Secondary button background
+$checkbox-active: #02ade6;    // Selected checkbox color
+$border-color: #e0e0e0;       // Input borders
+
+// ... rest of the variables remain unchanged ...
+
+// Responsive Breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+
+// Spacing
+$sidebar-width: 300px;
+$section-padding: 45px;
+$header-padding: 20px;
+$header-height: 6vh;
+$default-font: 1.1rem;
+$padding: 10px;
+
+// Shadows
+$shadow-default: 0 2px 4px rgba(0, 0, 0, 0.1);

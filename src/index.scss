@@ -1,0 +1,103 @@
+@import './variables.scss';
+
+// Reset & Base Styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Root Configuration
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: $default-font;
+  color-scheme: light dark;
+  color: $text-color-light;
+  background-color: $bg-color-light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Layout
+body, #root {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+// Typography
+a {
+  font-weight: 500;
+  color: $bg-color-light;
+  text-decoration: inherit;
+  
+  &:hover {
+    color: darken($color-primary, 10%);
+  }
+}
+
+// Components
+.button {
+  &-base {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: $default-font;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s, background-color 0.25s;
+    box-shadow: $shadow-default;
+  }
+
+  &-primary {
+    @extend .button-base;
+    background-color: $button-primary;
+    color: $text-color-dark;
+
+    &:hover {
+      background-color: darken($button-primary, 10%);
+      border-color: $color-primary;
+    }
+  }
+
+  &-secondary {
+    @extend .button-base;
+    background-color: $button-secondary;
+    color: $text-color-light;
+    border: 1px solid $border-color;
+
+    &:hover {
+      background-color: darken($button-secondary, 5%);
+    }
+  }
+}
+
+// Focus States
+:focus,
+:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+// Dark Mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: $text-color-dark;
+    background-color: $bg-color-dark;
+    $bg-color-section: $bg-color-dark;
+  }
+
+  .button-secondary {
+    background-color: rgba($button-secondary, 0.1);
+    color: $text-color-dark;
+    border-color: rgba($border-color, 0.3);
+
+    &:hover {
+      background-color: rgba($button-secondary, 0.2);
+    }
+  }
+}

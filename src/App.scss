@@ -1,0 +1,123 @@
+@import "./variables.scss";
+.app {
+  height: 100vh;
+  width: 100vw;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+
+  // Desktop layout
+  @media (min-width: $breakpoint-mobile) {
+    flex-direction: row;
+  }
+}
+
+header {
+  padding: $header-padding;
+  background-color: $bg-color-section;
+  height: $header-height;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid;
+  border-color: $bg-color-section;
+  -webkit-box-shadow: 2px 14px 87px -25px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 2px 14px 87px -25px rgba(255, 255, 255, 1);
+  box-shadow: 2px 14px 87px -25px rgba(255, 255, 255, 1);
+  z-index: 10;
+
+  .hamburger-menu {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: $default-font;
+    font-weight: bolder;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s, background-color 0.25s;
+    padding: 0.2rem;
+    width: 50px;
+    font-size: $default-font;
+  }
+}
+
+.sidebar {
+  background-color: $color-secondary;
+  color: $text-color-dark;
+  border-bottom: 1px solid;
+  border-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+
+  // Mobile & Tablet styles
+  @media (max-width: ($breakpoint-mobile - 1px)) {
+    position: fixed;
+    top: 0;
+    left: -$sidebar-width;
+    height: 100vh;
+    width: $sidebar-width;
+    transition: transform 0.3s ease-in-out;
+    z-index: 20;
+
+    &.open {
+      transform: translateX($sidebar-width);
+    }
+  }
+
+  // Desktop styles
+  @media (min-width: $breakpoint-mobile) {
+    width: $sidebar-width;
+    min-height: (100vh - $header-height);
+  }
+
+  nav {
+    padding: $section-padding;
+
+    ul {
+      list-style: none;
+
+      li {
+        font-size: $default-font;
+        font-weight: 200;
+        padding: 0.5rem 0;
+        cursor: pointer;
+        .active {
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: $bg-color-dark;
+    border-top: 1px solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    padding: ($section-padding / 2) $section-padding;
+    margin-top: auto;
+    a {
+      color: $bg-color-light;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
+
+.main-content {
+  flex: 1;
+  padding: $section-padding;
+
+  // Same padding as header on mobile
+  @media (max-width: $breakpoint-mobile) {
+    padding: $header-padding;
+  }
+}
