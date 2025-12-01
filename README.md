@@ -1,54 +1,44 @@
 # WebDevSolution
 
-## Live Demo
+## Demonstração ao vivo
 
-Você pode ver uma demonstração do projeto [aqui](https://webdevsolution.costa0910.dev/).
+Pode ver uma demonstração do projeto [aqui](https://webdevsolution.costa0910.dev/).
 
+## Requisitos
 
-## Pré-requisitos
-
-Antes de começar, você precisa ter o Node.js e o npm (ou yarn) instalados em sua máquina. Você pode baixar o Node.js [aqui](https://nodejs.org/).
+- Node.js v20.x (recomendado: LTS) — verifique com `node -v`.
+- npm 9+ (geralmente incluído com Node 20) ou yarn.
+- Git (opcional, para clonar o repositório).
 
 ## Instalação
 
-1. **Clone o repositório ou usa o codigo no zip e ignora esta etapa:**
+1. Clone o repositório ou use o código do ZIP:
+```bash
+git clone https://github.com/Costa0910/webdevsolution.git
+cd webdevsolution
+```
 
-   ```bash
-   git clone https://github.com/Costa0910/webdevsolution.git
-   cd webdevsolution
-   ```
+2. Instale as dependências:
+```bash
+npm install
+# ou
+yarn install
+```
 
-2. **Instale as dependências:**
+## Executar em modo de desenvolvimento
 
-   Execute o seguinte comando para instalar as dependências do projeto:
-
-   ```bash
-   npm install
-   ```
-
-   ou, se você estiver usando o yarn:
-
-   ```bash
-   yarn install
-   ```
-
-## Executando o Projeto
-
-Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
-
-  ```bash
+Inicie o servidor de desenvolvimento:
+```bash
 npm run dev
-   ```
-ou, se você estiver usando o yarn:
-  ```bash
+# ou
 yarn dev
-   ```
+```
 
-Depois de iniciar o servidor, você pode acessar o projeto no seu navegador em `http://localhost:5173/`.
+Abra no navegador: http://localhost:5173/
 
-## Scripts Disponíveis
+## Scripts disponíveis
 
-- `dev`: Inicia o servidor de desenvolvimento.
-- `build`: Cria uma versão otimizada do projeto para produção.
-- `lint`: Executa o ESLint para verificar problemas de estilo e erros no código.
-- `preview`: Visualiza a versão de produção do projeto.
+- `dev` — Inicia o servidor de desenvolvimento.
+- `build` — Gera uma versão otimizada para produção.
+- `preview` — Serve a build de produção localmente.
+- `lint` — Executa o ESLint para verificar problemas de estilo e erros.
