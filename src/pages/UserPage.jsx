@@ -7,68 +7,35 @@ const UserPage = () => {
       <h1>Utilizador</h1>
 
       <Collapsible title="Tipo de utilizador">
-                <div className="user-types">
-                    <label>
-                        <input 
-                            type="checkbox" 
-                            name="projectManager" 
-                            aria-label="Project Manager role"
-                        />
-                        <span>Project Manager</span>
-                    </label>
-                    <label>
-                        <input 
-                            type="checkbox" 
-                            name="developer" 
-                            defaultChecked 
-                            aria-label="Developer role"
-                        />
-                        <span>Developer</span>
-                    </label>
-                    <label>
-                        <input 
-                            type="checkbox" 
-                            name="architect" 
-                            defaultChecked 
-                            aria-label="Architect role"
-                        />
-                        <span>Architect</span>
-                    </label>
-                </div>
-            </Collapsible>
-      {/* <Collapsible title="Tipo de utilizador">
         <div className="user-types">
-          <label className="checkbox-container">
+          <label>
             <input
               type="checkbox"
               name="projectManager"
               aria-label="Project Manager role"
             />
-            <span className="checkmark"></span>
-            <span className="label-text">Project Manager</span>
+            <span>Project Manager</span>
           </label>
-          <label className="checkbox-container">
+          <label>
             <input
               type="checkbox"
               name="developer"
               defaultChecked
               aria-label="Developer role"
             />
-            <span className="checkmark"></span>
-            <span className="label-text">Developer</span>
+            <span>Developer</span>
           </label>
-          <label className="checkbox-container">
+          <label>
             <input
               type="checkbox"
               name="architect"
               defaultChecked
               aria-label="Architect role"
             />
-            <span className="checkmark"></span>
-            <span className="label-text">Architect</span>
+            <span>Architect</span>
           </label>
         </div>
-      </Collapsible> */}
+      </Collapsible>
 
       <Collapsible title="Contacto">
         <div className="contact-form">
