@@ -68,7 +68,7 @@ function App() {
           </nav>
           <footer className="footer">
             <p>
-              <a href="https://premium-minds.com">2024® Premium-minds.com</a>
+              <a href="https://premium-minds.com">2025® Premium-minds.com</a>
             </p>
           </footer>
         </aside>
