@@ -6,7 +6,7 @@
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
 
   &__header {
-    padding: $padding $padding + 10;
+    padding: $padding calc($padding + 10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,11 +36,15 @@
   }
 
   &__content {
-    padding: $padding + 30px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    padding: calc($padding + 30px);
     display: none;
 
     &.open {
       display: block;
+      pointer-events: auto;
     }
   }
 

@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { useIsMobile } from "./hooks/useBreakpoints";
 import { Routes, Route, NavLink } from "react-router-dom";
-import Lorem from "./pages/Lorem";
-import UserPage from "./pages/UserPage";
-import QuantumPage from "./pages/QuantumPage";
-import MarcusPage from "./pages/MarcusPage";
-import NotFound from "./pages/NotFound";
+
+const Lorem = lazy(() => import("./pages/Lorem"));
+const UserPage = lazy(() => import("./pages/UserPage"));
+const QuantumPage = lazy(() => import("./pages/QuantumPage"));
+const MarcusPage = lazy(() => import("./pages/MarcusPage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 import "./App.scss";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   };
   const LinkClickedOnMobile = () => {
     if (!isMobile) return;
-   setSidebarOpen(() => false);
+    setSidebarOpen(() => false);
   }
 
   return (
@@ -38,11 +39,10 @@ function App() {
         )}
 
         <aside
-          className={`sidebar ${
-            isMobile ? (isSidebarOpen ? "open" : "") : "open"
-          }`}
+          className={`sidebar ${isMobile ? (isSidebarOpen ? "open" : "") : "open"
+            }`}
         >
-        <nav>
+          <nav>
             <ul>
               <li onClick={LinkClickedOnMobile}>
                 <NavLink to="/lorem" className={({ isActive }) => isActive ? "active" : ""}>
@@ -74,13 +74,15 @@ function App() {
         </aside>
 
         <main className="main-content">
-          <Routes>
-            <Route index element={<UserPage />} />
-            <Route path="/lorem" element={<Lorem />} />
-            <Route path="/quantum" element={<QuantumPage />} />
-            <Route path="/marcus" element={<MarcusPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<div>Loading…</div>}>
+            <Routes>
+              <Route index element={<UserPage />} />
+              <Route path="/lorem" element={<Lorem />} />
+              <Route path="/quantum" element={<QuantumPage />} />
+              <Route path="/marcus" element={<MarcusPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </main>
       </div>
     </div>
