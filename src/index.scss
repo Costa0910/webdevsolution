@@ -1,4 +1,5 @@
-@import './variables.scss';
+@use 'sass:color';
+@use './variables' as *;
 
 // Reset & Base Styles
 * {
@@ -36,7 +37,8 @@ a {
   text-decoration: inherit;
   
   &:hover {
-    color: darken($color-primary, 10%);
+    // color: darken($color-primary, 10%);
+    color: color.adjust($color-primary, $lightness: 10%);
   }
 }
 
@@ -60,7 +62,8 @@ a {
     color: $text-color-dark;
 
     &:hover {
-      background-color: darken($button-primary, 10%);
+      // background-color: darken($button-primary, 10%);
+      background-color: color.adjust($button-primary, $lightness: 10%);
       border-color: $color-primary;
     }
   }
@@ -72,7 +75,7 @@ a {
     border: 1px solid $border-color;
 
     &:hover {
-      background-color: darken($button-secondary, 5%);
+      background-color: color.adjust($button-secondary, $lightness: 5%);
     }
   }
 }

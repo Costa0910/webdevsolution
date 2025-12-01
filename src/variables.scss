@@ -1,23 +1,4 @@
-// // Brand Colors
-// $color-primary: #00A7E1;     // Bright blue from the "GUARDAR" button
-// $color-secondary: #2C3E50;   // Dark blue-gray from the sidebar
-
-// // Background Colors
-// $bg-color-light: #F5F5F5;    // White main content background
-// $bg-color-dark: #1e2e3d;     // Same as secondary for dark mode
-// $bg-color-section: #FFFFFF;  // Light gray for section backgrounds (tipo de utilizador)
-
-// // Text Colors
-// $text-color-light: #2C3E50;  // Dark text for light mode
-// $text-color-dark: #FFFFFF;   // White text for dark mode
-// $text-color-muted: #6C7A89;  // Muted text for labels (Email, Telefone)
-
-// // UI Elements
-// $button-primary: #00A7E1;    // "GUARDAR" button
-// $button-secondary: #FFFFFF;   // "Cancelar" button
-// $checkbox-active: #00A7E1;    // Selected checkbox color
-// $border-color: #E0E0E0;      // Input borders
-// Brand Colors
+// Color Variables
 $color-primary: #02ade6;     // Updated bright blue for primary actions
 $color-secondary: #323f51;   // Updated sidebar background
 
@@ -38,8 +19,6 @@ $button-primary: #02ade6;     // Primary button background
 $button-secondary: #ffffff;    // Secondary button background
 $checkbox-active: #02ade6;    // Selected checkbox color
 $border-color: #e0e0e0;       // Input borders
-
-// ... rest of the variables remain unchanged ...
 
 // Responsive Breakpoints
 $breakpoint-mobile: 768px;
